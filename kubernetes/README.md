@@ -8,7 +8,7 @@ For example, <DOCKER_ACCOUNT>/<TAG_NAME>:<TAG_VERSION>
   
 2) If you need to build the container  
   - Login to your registry so you can push  
-  - Execute ```create_docker_image.sh```  
+  - Execute ```bash <REPO_ROOT>/docker/create_docker_image.sh```  
   
 3) To configure Atomic Red Team tests and run the Datadog agent execute ```bash setup.sh```  
   
