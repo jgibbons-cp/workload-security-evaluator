@@ -1,2 +1,5 @@
+#!/bin/bash
+
 export DD_API_KEY=<API_KEY>
-export TAG=<TAG>
+# sample image jenksgibbons/atomic_red_team:latest
+export TAG=""
