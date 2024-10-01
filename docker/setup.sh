@@ -27,7 +27,7 @@ echo ""
 echo "running the container..."
 echo ""
 sleep 1
-docker run --name atomic_red_team --privileged -d $TAG &&
+docker run --name atomic_red_team --privileged -d $TAG
 
 echo ""
 echo "getting container_id..."
