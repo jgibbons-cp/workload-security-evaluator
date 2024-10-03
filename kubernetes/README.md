@@ -20,6 +20,6 @@ container:
    or exit and use ```run_tests.sh``` to run some base tests.  NOTE: if you run the tests manually, there are 
    a few clean up commands in ```run_tests.sh``` if you run the tests on the same container more than once.
   
-5) To run base tests execute ```run_tests.sh``` To see how the tests map to Datadog rules see [here](https://github.com/DataDog/workload-security-evaluator?tab=readme-ov-file#test-against-real-world-threats)  
+5) To run base tests execute ```bash run_tests.sh``` To see how the tests map to Datadog rules see [here](https://github.com/DataDog/workload-security-evaluator?tab=readme-ov-file#test-against-real-world-threats)  
   
 6) To clean up run ```teardown.sh```  
