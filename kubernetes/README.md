@@ -1,4 +1,4 @@
-To use the tool with Kubernetes rather than docker compose. 
+To use the tool with Kubernetes rather than docker compose. Tested on EKS.  
 
 1) Configure environment variables  
   
