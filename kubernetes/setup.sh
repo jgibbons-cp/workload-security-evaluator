@@ -9,12 +9,22 @@ kubectl run atomic-red-team --image $TAG --privileged=true
 # create ns for Datadog agent
 kubectl create ns datadog
 
-# create secret for agent
+# create secret for operator/agent
 kubectl create secret generic datadog-secret --from-literal api-key=$DD_API_KEY -n datadog
 
-# install agent
+# install operator
 helm repo add datadog https://helm.datadoghq.com
 helm install dd-operator datadog/datadog-operator -n datadog
+
+# make sure operator is running
+ret_val=1
+while [ "$ret_val" -ne "0" ]
+do
+  kubectl get po -n datadog | grep dd-operator-datadog | grep Running
+  ret_val=$?
+done
+
+# create agent
 kubectl apply -f dd-agent.yaml -n datadog
 
 # let it start up and grab name
